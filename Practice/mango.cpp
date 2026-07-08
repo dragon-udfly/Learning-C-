@@ -1,8 +1,6 @@
-#include <iostream>
+#include <cstdio>
 
-int main()
-{
-    std::cout << "Hello MF! " << std::endl;
-
-    return 0;
+int main() {
+  std::printf("Hello MFs!\n");
+  return 0;
 }

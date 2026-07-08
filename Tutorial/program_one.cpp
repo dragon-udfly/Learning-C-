@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <string>
 
+// typedef <real datatype> AliasName or NickName
 typedef std::string Text;
 
 int main() {
@@ -13,6 +14,6 @@ int main() {
     std::printf("Password: %s\n", password.c_str());
     std::printf("Country: %s\n", country.c_str());
     std::printf("City: %s\n", city.c_str());
-    
+
     return 0;
 }

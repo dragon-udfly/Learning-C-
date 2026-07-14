@@ -13,5 +13,20 @@ int main() {
   double charge = 1.602e-19;
   std::printf("Electron Charge: %.22f\n", charge);
 
+  double speed_of_light = 299792458.0;
+  double electron_mass = 0.000000000000000000000000000000910938356;
+
+  // 1. Standard lowercase E-notation
+  std::printf("Speed of light (default): %e\n", speed_of_light);
+
+  // 2. Uppercase E-notation
+  std::printf("Speed of light (uppercase): %E\n", speed_of_light);
+
+  // 3. Controlled precision (2 decimal places)
+  std::printf("Electron mass (precision 2): %.2e\n", electron_mass);
+  std::printf("Electron mass (precision 4): %.4e\n", electron_mass);
+
+  return 0;
+
   return 0;
 }

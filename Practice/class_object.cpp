@@ -25,6 +25,7 @@ class OrangeClass {
         std::string og_name_ = "";
         int oranges_ = 0;
 };
+
 int main() {
     OrangeClass orange_one("StoneCold", 32);
     orange_one.PrintStuff();

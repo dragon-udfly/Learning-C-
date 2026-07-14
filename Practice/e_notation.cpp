@@ -25,8 +25,6 @@ int main() {
   // 3. Controlled precision (2 decimal places)
   std::printf("Electron mass (precision 2): %.2e\n", electron_mass);
   std::printf("Electron mass (precision 4): %.4e\n", electron_mass);
-
-  return 0;
-
+  
   return 0;
 }

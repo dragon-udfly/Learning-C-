@@ -74,6 +74,27 @@ int main() {
         cones[i].hight = cone_heights[i];
     }
 
+    std::printf("Calculating Cone Area......\n");
+    for(int i = 0; i < 5; i++) {
+        CalculateConeArea(&cones[i]);
+    }
+
+    std::printf("Areas Of Cones: \n");
+    for(int i = 0; i < 5; i++) {
+        std::printf("Cone[%d]: %.2lf\n", (i + 1), cones[i].area);
+    }
+    std::printf("\n");
+
+    std::printf("Calculating Cone Volume.........\n");
+    for(int i = 0; i < 5; i++) {
+        CalculateConeVolume(&cones[i]);
+    }
+
+    std::printf("Volumes Of Cones: \n");
+    for(int i = 0; i < 5; i++) {
+        printf("Cone[%d]: %.2lf\n", (i + 1), cones[i].volume);
+    }
+    std::printf("\n");
 
     return 0;
 }

@@ -23,9 +23,15 @@ typedef struct{
     double volume;
 } Cone;
 
-void CalculateConeArea(Cone *cn);
-void CalculateConeTilledLength(Cone *c);
-void CalculateConeVolume(Cone *c);
+void CalculateConeArea(Cone *cn) {
+    cn -> tilled_length = std::sqrt(std::pow(cn -> hight, 2) + std::pow(cn -> bottom_radius, 2));
+    
+    cn -> area = (3.143 * cn -> bottom_radius * cn -> tilled_length) + (3.143 * std::pow(cn -> bottom_radius, 2));
+}
+
+void CalculateConeVolume(Cone *c) {
+    c -> volume = (3.143 * std::pow(c -> bottom_radius, 2), c -> hight) / 3;
+}
 
 int main() {
 

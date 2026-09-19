@@ -1,6 +1,6 @@
 # Learning C++ Repository 🚀
 
-A comprehensive collection of C++ practice scripts, tutorials, and mini-projects ranging from fundamental syntax and object-oriented programming to advanced file manipulation and parallel computing (`mpi.h`)[cite: 2].
+A comprehensive collection of C++ practice scripts, tutorials, and mini-projects ranging from fundamental syntax and object-oriented programming to advanced file manipulation and parallel computing (`mpi.h`)
 
 ---
 
@@ -79,12 +79,12 @@ Example:
 For the MPI parallel computing script located in the Learn/ directory, compile and run using an MPI wrapper like mpicxx and mpirun:
 
 Bash
-# Compile
+### Compile
 ```
 mpicxx -o mpi_prog Learn/basic_mpi_program.cpp
 ```
 
-# Run with multiple processes (e.g., 4 processes)
+### Run with multiple processes (e.g., 4 processes)
 ```
 mpirun -np 4 ./mpi_prog
 ```

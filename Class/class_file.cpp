@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <string>
+#include <cstdlib>
 
 class Book{ 
     public: 
@@ -34,8 +35,17 @@ void Booknitializer(std::string title, std::string author, double price){
 
 int main(int argc, char* argv[]){
 
-    for(int i = 0; i < argc; i++) {
-        
+    if(argv[1] == "-init") {
+        if(argc == 5) {
+            char* end_ptr = nullptr;
+            double price_value = std::strtod(argv[4], &end_ptr);
+
+            if(argv[1] != end_ptr) {
+                Booknitializer(argv[2], argv[3], price_value);
+            } else {
+                std::printf("LOG: Error, Unable to parse string to double.\n");
+            }
+        }
     }
 
     return 0;

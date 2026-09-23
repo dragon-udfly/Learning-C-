@@ -27,10 +27,15 @@ class Book{
         double price_ = 0.0; 
 };
 
+void Booknitializer(std::string title, std::string author, double price){
+    Book book_one(title, author, price); 
+    std::printf("LOG: Book Object Created.\n");
+}
+
 int main(int argc, char* argv[]){
 
     for(int i = 0; i < argc; i++) {
-        std::printf("%s\n", argv[i]);
+        
     }
 
     return 0;

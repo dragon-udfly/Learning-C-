@@ -35,13 +35,17 @@ void Booknitializer(std::string title, std::string author, double price){
 
 int main(int argc, char* argv[]){
 
-    if(argv[1] == "-init") {
+    if(std::string(argv[1]) == "-init") {
+        std::printf("LOG: -init command detected.\n");
         if(argc == 5) {
+            std::printf("LOG: Argument count is 5.\n");
             char* end_ptr = nullptr;
             double price_value = std::strtod(argv[4], &end_ptr);
 
             if(argv[1] != end_ptr) {
+                std::printf("LOG: String to double is successful.\n");
                 Booknitializer(argv[2], argv[3], price_value);
+                std::printf("LOG: Passed values to BookInitializer method.\n");
             } else {
                 std::printf("LOG: Error, Unable to parse string to double.\n");
             }

@@ -17,7 +17,5 @@ int main(int argc, char* argv[]) {
         std::printf("%s\n", buffer_line.c_str());
     }
 
-    file.close(); // optional to close the file, destructor closes it automatically.
-
     return 0;
 }

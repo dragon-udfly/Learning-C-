@@ -28,12 +28,10 @@ class Book{
         double price_ = 0.0; 
 };
 
-void Booknitializer(std::string title, std::string author, double price){
-    Book book_one(title, author, price); 
-    std::printf("LOG: Book Object Created.\n");
-}
 
 int main(int argc, char* argv[]){
+
+    Book book_one;
 
     if(std::string(argv[1]) == "-init") {
         std::printf("LOG: -init command detected.\n");
@@ -42,13 +40,26 @@ int main(int argc, char* argv[]){
             char* end_ptr = nullptr;
             double price_value = std::strtod(argv[4], &end_ptr);
 
-            if(argv[1] != end_ptr) {
+            if(argv[4] != end_ptr) {
                 std::printf("LOG: String to double is successful.\n");
-                Booknitializer(argv[2], argv[3], price_value);
-                std::printf("LOG: Passed values to BookInitializer method.\n");
+                book_one.SetTitle(argv[2]);
+                book_one.SetAuthor(argv[3]);
+                book_one.SetPrice(price_value);
+
+                std::printf("LOG: Book Object Created.\n");
             } else {
                 std::printf("LOG: Error, Unable to parse string to double.\n");
             }
+        }
+    }
+
+    if(std::string(argv[1]) == "-print") {
+        std::printf("LOG: -print command detected.\n");
+        if(argc == 2) {
+            std::printf("LOG: Argument count is 2.\n");
+            std::printf("Title: %s\n", book_one.GetTitle().c_str());
+            std::printf("Author: %s\n", book_one.GetAuthor().c_str());
+            std::printf("Price: %.1f\n", book_one.GetPrice());
         }
     }
 
